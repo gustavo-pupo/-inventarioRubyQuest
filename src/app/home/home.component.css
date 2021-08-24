@@ -1,0 +1,76 @@
+#geral{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+}
+
+#Rael,
+#Kamito,
+#Kumoto,
+#Lan{
+    /* border: 1px solid black; */
+    width: 25%;
+    height: 350px;
+    margin: 0 2.5%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 0.5rem black;
+    border-radius: 2px;
+}
+#Rael:hover,
+#Kamito:hover,
+#Kumoto:hover,
+#Lan:hover,
+#inventario:hover{
+    cursor:pointer
+}
+#Rael{
+    background-image: url(../../assets/img/imgRae.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 140%;
+}
+#Kamito{
+    background-image: url(../../assets/img/imgKamito.jpg);
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#Kumoto{
+    background-image: url(../../assets/img/imgKumoto.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#Lan{
+    background-image: url(../../assets/img/imgLan.jpg);
+    background-position: top;
+    background-size: 150%;
+}
+#nomeRael,#nomeKamito,#nomeKumoto,#nomeLan{
+    width: 100%;
+    height: 30%;
+    padding: 0 0 0 8%;
+    background-color: #161444;
+    position: absolute;
+    bottom: 0;
+    color: #f2f2f2;
+    font-size: 1.8rem;
+}
+
+#inventario{
+    border: 1px solid black;
+    text-align: center;
+    width: 80%;
+    height: 30vh;
+    margin: 5% 10%;
+    font-size: 3rem;
+    background-image: url(../../assets/img/imgMochila.png);
+    background-size: 100%;
+    background-position:0 20%;
+}
+#inventario h2{
+    opacity: 60%;
+}
