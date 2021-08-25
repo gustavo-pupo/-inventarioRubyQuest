@@ -16,19 +16,24 @@
     margin: 0 2.5%;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 0 0.5rem black;
+    box-shadow: 0 8px 0.5rem black;
     border-radius: 2px;
+    transition: 0.2s;
 }
 #Rael:hover,
 #Kamito:hover,
 #Kumoto:hover,
-#Lan:hover,
+#Lan:hover{
+    cursor:pointer;
+    box-shadow: 0 8px 0.5rem purple;
+}
 #inventario:hover{
-    cursor:pointer
+    cursor: pointer;
+    box-shadow: 0px 8px 0.5rem purple;
 }
 #Rael{
     background-image: url(../../assets/img/imgRae.png);
-    background-position: right;
+    background-position: 100% 1500%;
     background-repeat: no-repeat;
     background-size: 140%;
 }
@@ -70,6 +75,8 @@
     background-image: url(../../assets/img/imgMochila.png);
     background-size: 100%;
     background-position:0 20%;
+    box-shadow: 0px 8px 0.5rem black;
+    transition: 0.2s;
 }
 #inventario h2{
     opacity: 60%;

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { RaelleComponent } from './raelle/raelle.component';
 import { KumotoComponent } from './kumoto/kumoto.component';
 import { LanComponent } from './lan/lan.component';
 import { KamitoComponent } from './kamito/kamito.component';
+import { InventarioComponent } from './inventario/inventario.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { KamitoComponent } from './kamito/kamito.component';
     RaelleComponent,
     KumotoComponent,
     LanComponent,
-    KamitoComponent
+    KamitoComponent,
+    InventarioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
