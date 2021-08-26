@@ -1,4 +1,5 @@
 <div id="geral">
+  <div id="cima">
   <div id="foto">
     <div id="armor">
         <h3>Armadura de Capitão</h3>
@@ -9,7 +10,7 @@
   <div id="nomeInfo">
     <h3 id="nome">Raelle - Maga</h3>
     <div id="vida">
-      <p>Vida:</p>
+    <p>Vida:</p>
         <div id="barraVida">
             <div id="barraInterior" [ngStyle]="{'width': vida*100/vidaMax + '%'}"><p>{{ vida*100/vidaMax }}%</p></div>
         </div>
@@ -23,20 +24,113 @@
         <input max="5500" min="0" id="numXP" type="number" [(ngModel)]="xp" />
       </div>
     <div id="maos">
-        <div id="maoEsquerda"></div>
-        <div id="maoDireita"></div>
+        <div id="maoEsquerda">
+          <span>Estaca Enferrujada</span><br>
+          <span>Dano Base:{{ danoBase }}</span>
+        </div>
+        <div id="maoDireita">
+          <span>Cajado Miserável</span>
+        </div>
     </div>
   </div>
-
+</div>
   <div id="atributos">
+    <!-- <button id="botaoLista" (click)="pegaTudo()">Listar</button> -->
     <div id="atributosBase">
-
+      <table class="bordaTabela">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Valor Base</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of atributos">
+            <td>{{ i.nome }}</td>
+            <td>{{ i.nivel }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div id="atributosAdd">
-
+      <table class="bordaTabela">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Valor Add</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vigor</td>
+            <td><input class="inputNivel" value="{{ vigorAdd }}" type="number" [(ngModel)]="vigorAdd"></td>
+          </tr>
+          <tr>
+            <td>Conhecimento</td>
+            <td><input class="inputNivel" value="{{ conhecimentoAdd }}" type="number" [(ngModel)]="conhecimentoAdd"></td>
+          </tr>
+          <tr>
+            <td>Fortuna</td>
+            <td><input class="inputNivel" value="{{ fortunaAdd }}" type="number" [(ngModel)]="fortunaAdd"></td>
+          </tr>
+          <tr>
+            <td>Força</td>
+            <td><input class="inputNivel" value="{{ forcaAdd }}" type="number" [(ngModel)]="forcaAdd"></td>
+          </tr>
+          <tr>
+            <td>Destreza</td>
+            <td><input class="inputNivel" value="{{ destrezaAdd }}" type="number" [(ngModel)]="destrezaAdd"></td>
+          </tr>
+          <tr>
+            <td>Inteligência</td>
+            <td><input class="inputNivel" value="{{ inteligenciaAdd }}" type="number" [(ngModel)]="inteligenciaAdd"></td>
+          </tr>
+          <tr>
+            <td>Fé</td>
+            <td><input class="inputNivel" value="{{ feAdd }}" type="number" [(ngModel)]="feAdd"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div id="atributosTotais">
-
+      <table class="bordaTabela">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vigor</td>
+            <td>{{ atributos[0].nivel + vigorAdd }}</td>
+          </tr>
+          <tr>
+            <td>Conhecimento</td>
+            <td>{{ atributos[1].nivel + conhecimentoAdd }}</td>
+          </tr>
+          <tr>
+            <td>Fortuna</td>
+            <td>{{ atributos[2].nivel + fortunaAdd }}</td>
+          </tr>
+          <tr>
+            <td>Força</td>
+            <td>{{ atributos[3].nivel + forcaAdd }}</td>
+          </tr>
+          <tr>
+            <td>Destreza</td>
+            <td>{{ atributos[4].nivel + destrezaAdd }}</td>
+          </tr>
+          <tr>
+            <td>Inteligência</td>
+            <td>{{ atributos[5].nivel + inteligenciaAdd }}</td>
+          </tr>
+          <tr>
+            <td>Fé</td>
+            <td>{{ atributos[6].nivel + feAdd }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
